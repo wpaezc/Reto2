@@ -37,7 +37,7 @@ if (tipo=="stop")
 	stop
 end
 
-delay 1000
+delay 10
 
 areadsensor tempSen
 rdata tempSen SensTipo idSens temp
@@ -49,7 +49,7 @@ end
 
 #Runs if battery value Bat is lower than 5 Joules
 battery bat
-cprint "Para sensor: " id "Nivel de bateria: " bat
+cprint "Ronda: " ite "Nivel de bateria: " bat
 if(bat<5)
 	data mens "critico" lonSen latSen
 	send mens ant
