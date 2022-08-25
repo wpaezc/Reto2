@@ -10,4 +10,13 @@ if( tipo == "alerta")
    cprint "Alerta en: longitud" valor1 ", latitud: " valor2
 end
 
+#If receives critico message, sends "stop" as broadcast mode
+if(tipo == "critico")
+	cprint "Nodo descargado en: longitud" valor1 ", latitud: " valor2
+	data p "stop"	
+	send p
+	wait 1000
+	stop
+end
+
 wait 100
